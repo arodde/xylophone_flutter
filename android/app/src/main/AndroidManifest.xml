@@ -2,6 +2,13 @@
     package="com.roddealain.formation.flutter.xylophone_flutter">
 	
     <uses-permission android:name="android.permission.INTERNET"/>
+
+
+
+
+
+
+
     <application
         android:label="xylophone_flutter"
         android:icon="@mipmap/ic_launcher">
@@ -39,5 +46,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <!-- Add the following service -->
+
     </application>
 </manifest>
