@@ -30,16 +30,14 @@ class _XylophoneAppState extends State<XylophoneApp> {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: SafeArea(
-            child: Center(
-              child: TextButton(
-                onPressed: () async {
-                  print('plop');
-                  await player.setAsset('assets/supercopter_2.mp4');
-                  player.play();
-                },
-                child: Text('Click Me'),
-              ),
+          child: Center(
+            child: TextButton(
+              onPressed: () async {
+                print('plop');
+                await player.setAsset('assets/note1.mp4');
+                player.play();
+              },
+              child: Text('Click Me 1'),
             ),
           ),
         ),
