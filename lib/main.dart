@@ -27,18 +27,8 @@ class _XylophoneAppState extends State<XylophoneApp> {
     super.dispose();
   }
 
-  // void playsound1(int number) {
-  //   /**
-  //    * bad asynchronus function
-  //    */
-  //   (number) async {
-  //     await player.setAsset('assets/note$number.mp4');
-  //     player.play();
-  //   };
-  // }
-
-  Future<void> playsound(int number) async {
-    await player.setAsset('assets/note$number.mp4');
+  Future<void> playsound(int soundNumber) async {
+    await player.setAsset('assets/note$soundNumber.mp4');
     player.play();
   }
 
@@ -50,75 +40,91 @@ class _XylophoneAppState extends State<XylophoneApp> {
         body: SafeArea(
           child: Column(
             children: [
-              TextButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.red),
+              Expanded(
+                child: TextButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.red),
+                  ),
+                  onPressed: () async {
+                    playsound(1);
+                  },
+                  child: Text(''),
                 ),
-                onPressed: () async {
-                  playsound(1);
-                },
-                child: Text(''),
               ),
-              TextButton(
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(Colors.deepOrangeAccent),
+              Expanded(
+                child: TextButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.deepOrangeAccent),
+                  ),
+                  onPressed: () async {
+                    playsound(2);
+                  },
+                  child: Text(''),
                 ),
-                onPressed: () async {
-                  playsound(2);
-                },
-                child: Text(''),
               ),
-              TextButton(
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(Colors.yellow.shade400),
+              Expanded(
+                child: TextButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.yellow.shade400),
+                  ),
+                  onPressed: () async {
+                    playsound(3);
+                  },
+                  child: Text(''),
                 ),
-                onPressed: () async {
-                  playsound(3);
-                },
-                child: Text(''),
               ),
-              TextButton(
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(Colors.green.shade300),
+              Expanded(
+                child: TextButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.green.shade300),
+                  ),
+                  onPressed: () async {
+                    playsound(4);
+                  },
+                  child: Text(''),
                 ),
-                onPressed: () async {
-                  playsound(4);
-                },
-                child: Text(''),
               ),
-              TextButton(
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(Colors.teal.shade200),
+              Expanded(
+                child: TextButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.teal.shade200),
+                  ),
+                  onPressed: () async {
+                    playsound(5);
+                  },
+                  child: Text(''),
                 ),
-                onPressed: () async {
-                  playsound(5);
-                },
-                child: Text(''),
               ),
-              TextButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blue),
+              Expanded(
+                child: TextButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.blue),
+                  ),
+                  onPressed: () async {
+                    playsound(6);
+                  },
+                  child: Text(''),
                 ),
-                onPressed: () async {
-                  playsound(6);
-                },
-                child: Text(''),
               ),
-              TextButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
+              Expanded(
+                child: TextButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.deepPurple),
+                  ),
+                  onPressed: () async {
+                    playsound(7);
+                  },
+                  child: Text(''),
                 ),
-                onPressed: () async {
-                  playsound(7);
-                },
-                child: Text(''),
               ),
             ],
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
           ),
         ),
       ),
