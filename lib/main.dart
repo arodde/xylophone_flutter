@@ -30,16 +30,78 @@ class _XylophoneAppState extends State<XylophoneApp> {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Center(
-            child: TextButton(
-              onPressed: () async {
-                print('plop');
-                await player.setAsset('assets/note1.mp4');
-                player.play();
-              },
-              child: Text('Click Me 1'),
+          child: Column(children: [
+            Center(
+              child: TextButton(
+                onPressed: () async {
+                  print('plop');
+                  await player.setAsset('assets/note1.mp4');
+                  player.play();
+                },
+                child: Text('Click Me'),
+              ),
             ),
-          ),
+            Center(
+              child: TextButton(
+                onPressed: () async {
+                  print('plop');
+                  await player.setAsset('assets/note2.mp4');
+                  player.play();
+                },
+                child: Text('Click Me'),
+              ),
+            ),
+            Center(
+              child: TextButton(
+                onPressed: () async {
+                  print('plop');
+                  await player.setAsset('assets/note3.mp4');
+                  player.play();
+                },
+                child: Text('Click Me'),
+              ),
+            ),
+            Center(
+              child: TextButton(
+                onPressed: () async {
+                  print('plop');
+                  await player.setAsset('assets/note4.mp4');
+                  player.play();
+                },
+                child: Text('Click Me'),
+              ),
+            ),
+            Center(
+              child: TextButton(
+                onPressed: () async {
+                  print('plop');
+                  await player.setAsset('assets/note5.mp4');
+                  player.play();
+                },
+                child: Text('Click Me'),
+              ),
+            ),
+            Center(
+              child: TextButton(
+                onPressed: () async {
+                  print('plop');
+                  await player.setAsset('assets/note6.mp4');
+                  player.play();
+                },
+                child: Text('Click Me'),
+              ),
+            ),
+            Center(
+              child: TextButton(
+                onPressed: () async {
+                  print('plop');
+                  await player.setAsset('assets/note7.mp4');
+                  player.play();
+                },
+                child: Text('Click Me'),
+              ),
+            ),
+          ]),
         ),
       ),
     );
