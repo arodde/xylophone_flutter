@@ -27,6 +27,21 @@ class _XylophoneAppState extends State<XylophoneApp> {
     super.dispose();
   }
 
+  // void playsound1(int number) {
+  //   /**
+  //    * bad asynchronus function
+  //    */
+  //   (number) async {
+  //     await player.setAsset('assets/note$number.mp4');
+  //     player.play();
+  //   };
+  // }
+
+  Future<void> playsound(int number) async {
+    await player.setAsset('assets/note$number.mp4');
+    player.play();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -40,20 +55,17 @@ class _XylophoneAppState extends State<XylophoneApp> {
                   backgroundColor: MaterialStateProperty.all(Colors.red),
                 ),
                 onPressed: () async {
-                  print('plop');
-                  await player.setAsset('assets/note1.mp4');
-                  player.play();
+                  playsound(1);
                 },
                 child: Text(''),
               ),
               TextButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.deepOrange),
+                  backgroundColor:
+                      MaterialStateProperty.all(Colors.deepOrangeAccent),
                 ),
                 onPressed: () async {
-                  print('plop');
-                  await player.setAsset('assets/note2.mp4');
-                  player.play();
+                  playsound(2);
                 },
                 child: Text(''),
               ),
@@ -63,9 +75,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                       MaterialStateProperty.all(Colors.yellow.shade400),
                 ),
                 onPressed: () async {
-                  print('plop');
-                  await player.setAsset('assets/note3.mp4');
-                  player.play();
+                  playsound(3);
                 },
                 child: Text(''),
               ),
@@ -75,10 +85,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                       MaterialStateProperty.all(Colors.green.shade300),
                 ),
                 onPressed: () async {
-                  print('plop');
-                  await player.setAsset('assets/note4.mp4');
-
-                  player.play();
+                  playsound(4);
                 },
                 child: Text(''),
               ),
@@ -88,9 +95,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                       MaterialStateProperty.all(Colors.teal.shade200),
                 ),
                 onPressed: () async {
-                  print('plop');
-                  await player.setAsset('assets/note5.mp4');
-                  player.play();
+                  playsound(5);
                 },
                 child: Text(''),
               ),
@@ -99,9 +104,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                   backgroundColor: MaterialStateProperty.all(Colors.blue),
                 ),
                 onPressed: () async {
-                  print('plop');
-                  await player.setAsset('assets/note6.mp4');
-                  player.play();
+                  playsound(6);
                 },
                 child: Text(''),
               ),
@@ -110,9 +113,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                   backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
                 ),
                 onPressed: () async {
-                  print('plop');
-                  await player.setAsset('assets/note7.mp4');
-                  player.play();
+                  playsound(7);
                 },
                 child: Text(''),
               ),
