@@ -32,15 +32,51 @@ class _XylophoneAppState extends State<XylophoneApp> {
     player.play();
   }
 
+  // Widget? xyloTouch(
+  //     {required int soundNumber, required MaterialStateProperty<Colors> col}) {
+  //   return Expanded(
+  //     child: TextButton(
+  //       style: ButtonStyle(
+  //         backgroundColor: col,
+  //       ),
+  //       onPressed: () async {
+  //         playsound(soundNumber);
+  //       },
+  //       child: Text(''),
+  //     ),
+  //   );
+  // }
+
+  buildkey({required int number, required Colors col}) {
+    return Expanded(
+      child: TextButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(col as Color),
+        ),
+        onPressed: () async {
+          playsound(number);
+        },
+        child: Text(''),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey.shade600,
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
-            children: [
-              Expanded(
+            children: <Widget>[
+              buildkey(number: 1, col: Colors.red),
+              buildkey(number: 2, col: Colors.orange),
+              buildkey(number: 3, col: Colors.yellow),
+              buildkey(number: 4, col: Colors.green),
+              buildkey(number: 5, col: Colors.tealAccent),
+              buildkey(number: 5, col: Colors.blue),
+              buildkey(number: 6, col: Colors.purple),
+              /* Expanded(
                 child: TextButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.red),
@@ -121,7 +157,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                   },
                   child: Text(''),
                 ),
-              ),
+              ),*/
             ],
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
