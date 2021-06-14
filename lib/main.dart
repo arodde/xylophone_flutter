@@ -14,6 +14,7 @@ class XylophoneApp extends StatefulWidget {
 
 class _XylophoneAppState extends State<XylophoneApp> {
   late AudioPlayer player;
+  Color color = Colors.white;
 
   @override
   void initState() {
@@ -47,7 +48,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
   //   );
   // }
 
-  buildkey({required int number, required Colors col}) {
+  buildkey({required int number, required Color col}) {
     return Expanded(
       child: TextButton(
         style: ButtonStyle(
