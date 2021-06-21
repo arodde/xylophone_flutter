@@ -73,8 +73,8 @@ class _XylophoneAppState extends State<XylophoneApp> {
               buildkey(number: 1, col: Colors.red),
               buildkey(number: 2, col: Colors.orange),
               buildkey(number: 3, col: Colors.yellow),
-              buildkey(number: 4, col: Colors.green),
-              buildkey(number: 5, col: Colors.tealAccent),
+              buildkey(number: 4, col: Colors.greenAccent),
+              buildkey(number: 5, col: Colors.teal),
               buildkey(number: 5, col: Colors.blue),
               buildkey(number: 6, col: Colors.purple),
               /* Expanded(
