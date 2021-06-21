@@ -50,14 +50,17 @@ class _XylophoneAppState extends State<XylophoneApp> {
 
   buildkey({required int number, required Color col}) {
     return Expanded(
-      child: TextButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(col as Color),
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: TextButton(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(col as Color),
+          ),
+          onPressed: () async {
+            playsound(number);
+          },
+          child: Text(''),
         ),
-        onPressed: () async {
-          playsound(number);
-        },
-        child: Text(''),
       ),
     );
   }
