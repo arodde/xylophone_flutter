@@ -48,7 +48,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
   //   );
   // }
 
-  buildkey({required int number, required Color col}) {
+  buildkey({required int number, required Color col, String? description}) {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(2.0),
@@ -59,7 +59,13 @@ class _XylophoneAppState extends State<XylophoneApp> {
           onPressed: () async {
             playsound(number);
           },
-          child: Text(''),
+          child: Text(
+            description!,
+            style: const TextStyle(
+                color: Colors.white,
+                fontSize: 50.0,
+                fontFamily: "FrederickatheGreat"),
+          ),
         ),
       ),
     );
@@ -73,13 +79,13 @@ class _XylophoneAppState extends State<XylophoneApp> {
         body: SafeArea(
           child: Column(
             children: <Widget>[
-              buildkey(number: 1, col: Colors.red),
-              buildkey(number: 2, col: Colors.orange),
-              buildkey(number: 3, col: Colors.yellow),
-              buildkey(number: 4, col: Colors.greenAccent),
-              buildkey(number: 5, col: Colors.teal),
-              buildkey(number: 5, col: Colors.blue),
-              buildkey(number: 6, col: Colors.purple),
+              buildkey(number: 1, col: Colors.red, description: "Do"),
+              buildkey(number: 2, col: Colors.orange, description: "Ré"),
+              buildkey(number: 3, col: Colors.yellow, description: "Mi"),
+              buildkey(number: 4, col: Colors.greenAccent, description: "Fa"),
+              buildkey(number: 5, col: Colors.teal, description: "Sol"),
+              buildkey(number: 5, col: Colors.blue, description: "La"),
+              buildkey(number: 6, col: Colors.purple, description: "Si"),
               /* Expanded(
                 child: TextButton(
                   style: ButtonStyle(
