@@ -75,9 +75,8 @@ class _XylophoneAppState extends State<XylophoneApp> {
       String fileSoundName = '',
       required Color col,
       String? description}) {
-    _titleSound = displaySoundText(shortSounds[number]) +
-        ' / ' +
-        displaySoundText(longSounds[number]);
+    _titleSound = displaySoundText(shortSounds[number]);
+    // _titleSound = displaySoundText(shortSounds[number]) +        ' / ' +        displaySoundText(longSounds[number]);
 
     return Expanded(
       child: Padding(
