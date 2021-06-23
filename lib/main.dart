@@ -33,7 +33,6 @@ class _XylophoneAppState extends State<XylophoneApp> {
   ];
 
   late AudioPlayer player;
-  Color _color = Colors.white;
   String _titleSound = "";
 
   @override
@@ -76,14 +75,16 @@ class _XylophoneAppState extends State<XylophoneApp> {
       String fileSoundName = '',
       required Color col,
       String? description}) {
-    _titleSound = this.displaySoundText(shortSounds[number]);
-    _titleSound = this.displaySoundText(longSounds[number]);
+    _titleSound = displaySoundText(shortSounds[number]) +
+        ' / ' +
+        displaySoundText(longSounds[number]);
+
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(2.0),
         child: TextButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(col as Color),
+            backgroundColor: MaterialStateProperty.all(col),
           ),
           onPressed: () async {
             playShortSound(number);
@@ -111,13 +112,6 @@ class _XylophoneAppState extends State<XylophoneApp> {
         body: SafeArea(
           child: Column(
             children: <Widget>[
-              // buildkey(number: 0, col: Colors.red, fileSoundName: "do"),
-              // buildkey(number: 1, col: Colors.orange,   description: "Ré"),
-              // buildkey(number: 2, col: Colors.yellow,   description: "Mi"),
-              // buildkey(number: 3, col: Colors.greenAccent, description: "Fa"),
-              // buildkey(number: 4, col: Colors.teal,  description: "Sol"),
-              // buildkey(number: 5, col: Colors.blue,  description: "La"),
-              // buildkey(number: 6, col: Colors.purple,  ,description:"Si"),
               buildkey(number: 0, col: Colors.red, fileSoundName: _titleSound),
               buildkey(number: 1, col: Colors.orange, description: _titleSound),
               buildkey(number: 2, col: Colors.yellow, description: _titleSound),
