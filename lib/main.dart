@@ -31,7 +31,15 @@ class _XylophoneAppState extends State<XylophoneApp> {
     'assets/longSounds/monkeys.mp3',
     'assets/longSounds/peacock.mp3'
   ];
-
+  List<String> pictures = [
+    'assets/img/chicken.png',
+    'assets/img/wolf-howling-at-the-moon.png',
+    'assets/img/chicken.png',
+    'assets/img/elephant-side-view.png',
+    'assets/img/tropical-frop.png',
+    'assets/img/monkey-facing-right.png',
+    'assets/img/peacock.png',
+  ];
   late AudioPlayer player;
   String _titleSound = "";
 
@@ -91,12 +99,20 @@ class _XylophoneAppState extends State<XylophoneApp> {
           onLongPress: () async {
             playLongSound(number);
           },
-          child: Text(
-            _titleSound,
-            style: const TextStyle(
-                color: Colors.white,
-                fontSize: 50.0,
-                fontFamily: "FrederickatheGreat"),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                _titleSound,
+                style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 50.0,
+                    fontFamily: "FrederickatheGreat"),
+              ),
+              Image(
+                image: AssetImage(pictures[number]),
+              ),
+            ],
           ),
         ),
       ),
@@ -109,6 +125,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
       home: Scaffold(
         backgroundColor: Colors.black,
         body: SafeArea(
+// TODO I need to revise the size the text in the piano tiles for the landscape configuration.
           child: Column(
             children: <Widget>[
               buildkey(number: 0, col: Colors.red, fileSoundName: _titleSound),

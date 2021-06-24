@@ -81,6 +81,15 @@ flutter:
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
+    - assets/img/chicken.png
+    - assets/img/elephant-side-view.png
+    - assets/img/monkey-facing-right.png
+    - assets/img/wolf.png
+    - assets/img/wolf-howling-at-the-moon.png
+    - assets/img/tropical-frop.png
+    - assets/img/peacock.png
+
+
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
 
@@ -103,3 +112,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+
