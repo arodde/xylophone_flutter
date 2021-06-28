@@ -69,7 +69,7 @@ flutter:
     - assets/shortSounds/la.mp4
     - assets/shortSounds/si.mp4
 
-    - assets/longSounds/robin.mp3
+    - assets/longSounds/undead.mp3
     - assets/longSounds/wolf.mp3
     - assets/longSounds/chicks.mp3
     - assets/longSounds/elephant.mp3
@@ -88,6 +88,7 @@ flutter:
     - assets/img/wolf-howling-at-the-moon.png
     - assets/img/tropical-frop.png
     - assets/img/peacock.png
+    - assets/img/umbrella.png
 
 
   # For details regarding adding assets from package dependencies, see

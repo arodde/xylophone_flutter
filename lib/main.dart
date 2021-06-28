@@ -23,7 +23,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
     'assets/shortSounds/si.mp4'
   ];
   List<String> longSounds = [
-    'assets/longSounds/robin.mp3',
+    'assets/longSounds/undead.mp3',
     'assets/longSounds/wolf.mp3',
     'assets/longSounds/chicks.mp3',
     'assets/longSounds/elephant.mp3',
@@ -32,7 +32,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
     'assets/longSounds/peacock.mp3'
   ];
   List<String> pictures = [
-    'assets/img/chicken.png',
+    'assets/img/umbrella.png',
     'assets/img/wolf-howling-at-the-moon.png',
     'assets/img/chicken.png',
     'assets/img/elephant-side-view.png',
