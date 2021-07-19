@@ -1,3 +1,8 @@
+# contexte :
+
+## Je réalise ce projet dans le cadre d'une formation en ligne
+J'ai ajouté une sonorité (sur clic long) et une illustration réprésentatrice. Le parapluie est une référence au jeu vidéo Resident Evil.
+
 # xylophone_flutter
 
 A new Flutter project.
